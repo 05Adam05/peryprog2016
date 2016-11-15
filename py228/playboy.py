@@ -73,5 +73,7 @@ lh8QrxrWT7p30a9Ln6J4m8L1cHlGHzvI5KlXyqMqkL35ZU4wvUpyUbX54wS6PTdXbP/Z"""
 import base64
 
 b = base64.b64decode(img)
+print(b)
+
 
 open('loh2.jpg', "wb").write(b)

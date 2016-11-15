@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<menu>
+    <breakfast time='7:30'>
+        <item>Яишница</item>
+        <item>Несквик</item>
+    </breakfast>
+    <lunch time='13:00' halal='true'>
+        <item>Шаурма</item>
+        <item>Лахмаджун</item>
+        <item>Напиток</item>
+    </lunch>
+    <diner time='20:00'>
+        <item>Ужин</item>
+    </diner>
+</menu>
