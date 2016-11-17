@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<breakfast time='7:00'>
+		<item>Каша-какаша</item>
+		<item>Чай</item>
+	</breakfast>
+	<lunch time='13:00' durnoi='да'>
+		<item>Суп</item>
+		<item>Плов</item>
+		<item>Компот</item>
+	</lunch>
+	<dinner time='19:00'>
+		<item>Яйца</item>
+		<item>Чуду</item>
+		<item>Суши</item>
+		<item>Денеб</item>
+	</dinner>
+</menu>

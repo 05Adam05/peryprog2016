@@ -1,0 +1,12 @@
+<?xml version='1.00' encoding="UTF-8"?>
+<menu>
+	<breakfast hours='8:00'>
+		<item>Яиxница</item>
+		<item>Чай</item>
+	</breakfast>
+	<lunch hours='12:00'>
+		<item>Шамбургер</item>
+		<item>Суп</item>
+		<item>Компот</item>
+	</lunch>
+</menu>
