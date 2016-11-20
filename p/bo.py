@@ -13,15 +13,18 @@ class myWindow(QWidget):
         self.initUI()
         
     def initUI(self):
-
-        self.holes = []
         grid = QGridLayout()
         grid.setSpacing(10)
-        
+        self.holes = []
+        self.holesL = []
+
+        k = 0
         for i in range(6):
-            k = i
-            self.holes.append(QPixmap("bo1.png"))
-            grid.addWidget(self.holes[i], i, k)
+            
+            self.holes.append(QPixmap("piq.png"))
+            self.holesL.append(QLabel('1',self))
+            grid.addWidget(self.holesL[i], k, i)
+            k = k + 1 if k < 3 else 0
 
 
         self.setLayout(grid) 
