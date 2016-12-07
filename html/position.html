@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style>
+		.static {
+			position: static;
+			border: 3px solid green;
+		}
+		.relative {
+			position: relative;
+			border: 3px solid green;
+			left: 30px;
+			top: 30px;
+
+		}
+
+		.fixed {
+			position: fixed;
+			border: 3px solid green;
+			right: 0;
+			top: 0;
+		}
+
+		.absolute {
+			position: relative;
+			border: 3px solid green;
+			left: 30px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="static">Лох</div>
+	<div class="fixed">Лох</div>
+	<div class="relative"><div class="absolute">Лох</div></div>
+</body>
+</html>

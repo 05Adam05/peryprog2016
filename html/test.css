@@ -1,0 +1,12 @@
+body {
+/*	background-color: black;
+	background-image: url("sobaka12.jpg");
+	background-repeat: no-repeat;
+	background-position: right top;
+	background-attachment: fixed; 
+*/
+	background: #000 url("sobaka12.jpg") no-repeat right top fixed;
+}
+p {
+	font-size: 70px;
+}

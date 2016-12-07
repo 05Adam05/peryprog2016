@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		.row {
+
+		}
+
+		.header {
+			background-color: #009900; 
+			color: #FFF;
+			padding: 20px;
+		}
+
+		.menu ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		.menu li {
+			padding: 8px;
+			margin-bottom: 6px;
+			background-color: #339933;
+			color: #FFF;
+		}
+
+		.aside {
+			background-color: #339933;
+			color: #FFF;
+			padding: 15px;
+			margin-top: 15px;
+		}
+
+		.footer {
+			background-color: #559955; 
+			color: #FFF;
+			text-align: center;
+			padding: 15px;
+			font-size: 12px;
+		}
+
+		[class*="col-"] {
+			float: left;
+			padding: 15px;
+			width: 100%;
+		}
+
+		.row::after {
+			clear: both;
+			display: block;
+
+		}
+
+		@media only screen and (min-width: 600px) {
+			.col-m-1 { width: 8.33%; }
+			.col-m-2 { width: 16.66%; }
+			.col-m-3 { width: 25%; }
+			.col-m-4 { width: 33.33%; }
+			.col-m-5 { width: 41.66%; }
+			.col-m-6 { width: 50%; }
+			.col-m-7 { width: 58.33%; }
+			.col-m-8 { width: 66.66%; }
+			.col-m-9 { width: 75%; }
+			.col-m-10 { width: 83.33%; }
+			.col-m-11 { width: 91.66%; }
+			.col-m-12 { width: 100%; }
+
+		}
+
+
+		@media only screen and (min-width: 768px) {
+			.col-1 { width: 8.33%; }
+			.col-2 { width: 16.66%; }
+			.col-3 { width: 25%; }
+			.col-4 { width: 33.33%; }
+			.col-5 { width: 41.66%; }
+			.col-6 { width: 50%; }
+			.col-7 { width: 58.33%; }
+			.col-8 { width: 66.66%; }
+			.col-9 { width: 75%; }
+			.col-10 { width: 83.33%; }
+			.col-11 { width: 91.66%; }
+			.col-12 { width: 100%; }
+
+		}
+
+	</style>
+</head>
+<body>
+	<div class="header col-12 col-m-12">
+		<h1>Собачки</h1>
+	</div>
+	<div class ="row">
+	<div class="menu col-3 col-m-3">
+			<ul>
+				<li>Добрые</li>
+				<li>Злые</li>
+				<li>Хаски</li>
+				<li>Арсен</li>
+			</ul>
+		</div>
+	
+		<div class="content col-6 col-m-9">
+			<h1>Собаки</h1>
+			<p>Соба́ка (лат. Canis lupus familiaris) — домашнее животное, одно из наиболее распространённых (наряду с кошкой) «животных-компаньонов».</p>
+			<p>Первоначально домашняя собака была выделена в отдельный биологический вид (лат. Canis familiaris) Линнеем в 1758 году, в 1993 году реклассифицирована Смитсоновским институтом и Американской ассоциацией териологов в подвид волка (Canis lupus)[2].</p>
+			<p>С зоологической точки зрения, собака — плацентарное млекопитающее отряда хищных семейства псовых.</p>
+			<p>Собаки известны своими способностями к обучению, любовью к игре, социальным поведением. Выведены специальные породы собак, предназначенные для различных целей: охоты, охраны, тяги гужевого транспорта и др., а также декоративные породы (например, болонка, пудель).</p>
+		</div>
+	
+		<div class="aside col-3 col-m-12">
+			<h2>Собаки</h2>
+			<p>Собаки лучшие друзья челоека</p>
+		</div>
+	</div>
+
+	<div class="footer col-12 col-m-12">
+		<p>Сайт сделан Лучшими ллюдьми на свете 2016</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Мой сайт</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			outline: 0;
+			box-sizing: border-box;
+		}
+		.header {
+			background-color: #F93;
+			color: #FFF;
+			padding: 8px;
+		}
+
+		.menu ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.menu li {
+			padding: 8px;
+			margin-bottom: 6px;
+			background-color: #F95;
+			color: #FFF;
+		}
+		.aside {
+			padding: 8px;
+			background-color: #F95;
+			color: #FFF;
+			text-align: center;
+		}
+
+		.footer {
+			padding: 8px;
+			background-color: #F98;
+			color: #FFF;
+			text-align: center;
+			font-size: 0.8em;
+		}
+
+		[class*="col-"] {
+			float: left;
+			width: 100%;
+			margin-bottom: 20px;
+		}
+
+		@media only screen and (min-width: 768px) {
+			.col-1 { width: 8.33%; }
+			.col-2 { width: 16.66%; }
+			.col-3 { width: 25%; }
+			.col-4 { width: 33.33%; }
+			.col-5 { width: 41.66%; }
+			.col-6 { width: 50%; }
+			.col-7 { width: 58.33%; }
+			.col-8 { width: 66.66%; }
+			.col-9 { width: 75%; }
+			.col-10 { width: 83.33%; }
+			.col-11 { width: 91.66%; }
+			.col-12 { width: 100%; }
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="header col-12">
+		<h1>Лисы</h1>
+	</div>
+	<div class="menu col-3">
+		<ul>
+			<li>Тина</li>
+			<li>Абдула</li>
+			<li>Андрей</li>
+			<li>Супер</li>
+		</ul>
+	</div>
+	<div class="content col-6">
+		<h1>Лисы</h1>
+		<p>Лиси́ца — общее название нескольких видов млекопитающих семейства псовых. Лишь 10 видов этой группы относят к роду собственно лисиц (лат. Vulpes). Наиболее известный и распространённый представитель — обыкновенная лисица (Vulpes vulpes). Лисицы встречаются в фольклоре многих народов по всему миру.</p>
+		<p>Согласно современным представлениям о филогении псовых[1] группа лисиц в понимании, которое используется в этой статье, — полифилетическая, следовательно, непригодная для использования в качестве таксона.</p>
+	</div>
+	<div class="aside col-3">
+		<h2>Лисы</h2>
+		<p>Лисы — это пушистые звери</p>
+	</div>
+	<div class="footer col-12">
+		<p>Этот сайт сделал Ахмел в 2016 </p>
+	</div>
+</body>
+</html>

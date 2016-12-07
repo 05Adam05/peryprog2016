@@ -1,0 +1,12 @@
+body {
+/*	background-color: black;
+	background-image: url("fox.png");
+	background-repeat: no-repeat;
+	background-position: top right;
+	background-size: 100%;
+	background-attachment: fixed;*/
+	background: #000 url("fox.png") no-repeat top right fixed;
+}
+h1 {
+	font-size: 10px;
+}

@@ -1,0 +1,12 @@
+body {
+/*	background-color: purple;
+	background-image: url("fox1.png");
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	background-attachment: fixed;*/
+	background: #f0f url("fox1.png") repeat-x right bottom fixed;
+
+}
+h1 {
+	font-size: 70px;
+}

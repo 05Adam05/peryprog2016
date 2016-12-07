@@ -28,7 +28,7 @@ class myWindow(QWidget):
 
         grid = QGridLayout()
         grid.setSpacing(10)
-        # self.holes = []
+       
         self.holesL = []
 
         k, n = 0, 0
@@ -39,7 +39,7 @@ class myWindow(QWidget):
             self.holesL[i].setIcon(QIcon(UNACTIVE))
             self.holesL[i].setIconSize(QSize(200,200))
             
-            self.holesL[i].installEventFilter(self)
+            # self.holesL[i].installEventFilter(self)
 
             self.holesL[i].clicked.connect(self.doAction)
 
@@ -80,7 +80,7 @@ class myWindow(QWidget):
             self.clearHim()
             return
         
-        self.step = self.step + 1
+        self.step += 1
         if self.step % 2:
             l = int(self.time.text()) - 1
             self.time.setText(str(l))
