@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Исак сегодня учитель</title>
+</head>
+<body>
+    <div id="the-best">Абдурахман</div>
+    <p class="abz">Абзац1</p>
+    <p class="abz">Абзац2</p>
+    <p onclick="changeText(this)">Абзац3</p>
+    <p onmouseover="changeAnj(this, 1)" onmouseout="changeAnj(this, 0)">Анжелика</p>
+    <script> 
+        document.getElementById("the-best").innerHTML = "Абдурахман лучший";
+        console.log(document.body.children[1].innerHTML);
+        console.log(document.body.children[1].nextElementSibling.innerHTML);
+        console.log(document.head.lastElementChild.tagName);
+        console.log(document.body.lastElementChild.tagName);
+        document.getElementsByClassName("abz")[1].innerHTML = "Саид";
+        document.getElementsByTagName("p")[2].innerHTML = "Настя";
+        var best = document.querySelectorAll(".abz, #the-best");
+        for (var i=0; i<best.length; i++) {
+            console.log(best[i].innerHTML);
+        }
+        var theBest = document.getElementById("the-best");
+        theBest.style.color = "#F44";
+        theBest.style.fontSize = "2em";
+        theBest.title = "the best";
+        
+        function changeText(obj) {
+            obj.innerHTML = "Зяблик";
+        }
+        
+        function changeAnj(obj, active) {
+            var c = Math.random().toString().substr(2,6);
+            console.log(c); 
+            if (active) {
+                obj.style.color = "#"+c;
+                // obj.style.transform = "rotate(30deg)";   
+            }
+            else {
+                obj.style.color = "#f00";
+
+            }
+        }
+    </script>
+</body>
+</html>
