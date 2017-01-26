@@ -62,17 +62,28 @@ class MyCircle(Widget):
         # print(cangle)
         angle = acos(cangle)
         new_x = self.center_x + r * cangle
+        self.gangle = 180/pi * angle
         if y > 0:
             new_y = self.center_y + r* sin(angle)
+
         else:
-           new_y = self.center_y - r* sin(angle) 
+            new_y = self.center_y - r* sin(angle)
+            self.gangle = 360 - self.gangle
         # new_x = touch.x
         # new_y = touch.y
         return new_x, new_y
 
     def show_values(self, x, y):
-        my_sin = self.radius  
-        my_cos = self.radius
+       
+        x = x - self.center_x
+        y = y - self.center_y
+        r = self.radius
+        # print(x, y, r)
+        my_sin = y / r  
+        my_cos = x / r
+        print("angle:",self.gangle)
+        print("sin:",my_sin)
+        print("cos:",my_cos)
 
     def on_touch_down(self, touch):
         self.canvas.clear();
