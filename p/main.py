@@ -6,22 +6,29 @@ from kivy.core.window import Window
 from kivy.uix.widget import Widget
 from math import sin, cos, sqrt, pi, acos
 from kivy.graphics import Color, Ellipse
+from kivy.core.text import Label as CoreLabel
 
-class MyLine(Widget):
-    pass
+
 
         
+class MyCircle(FloatLayout):
 
-
-class MyCircle(Widget):
     def __init__(self, **kwargs):
         super(MyCircle, self).__init__(**kwargs)
-        self.main_line =  MyLine()
         self.size = Window.size
-        root = self
+        # root = self
         self.radius = 0.4 * min(self.size)
         print(self.radius)
-
+        self.my_sin = 0
+        self.my_cos = 0
+        self.gangle = 0
+        # my_label = CoreLabel()
+        # my_label.text = "angle: {0}".format(self.gangle)
+        # my_label.refresh()
+        # hello_texture = my_label.texture
+        self.gangle_label = Label(text="angle: {0}".format(self.gangle))
+        self.sin_label = Label(text="sin: {0}".format(self.my_sin))
+        self.cos_label = Label(text="cos: {0}".format(self.my_cos))
         self.draw_axis()
         self.draw_main_circle()
 
@@ -52,14 +59,12 @@ class MyCircle(Widget):
             Line(points=[x, self.center_y, x, y], width=1)
             Line(points=[self.center_x, self.center_y, self.center_x, y], width=1)
 
+
     def give_coords(self,touch):
         x = touch.x - self.center_x
         y = touch.y - self.center_y
         r = self.radius
-        # print(touch.x, touch.y)
-        # print(x, y, r)
         cangle = x * r/(sqrt(x ** 2 + y ** 2) * sqrt(r ** 2))
-        # print(cangle)
         angle = acos(cangle)
         new_x = self.center_x + r * cangle
         self.gangle = 180/pi * angle
@@ -69,23 +74,37 @@ class MyCircle(Widget):
         else:
             new_y = self.center_y - r* sin(angle)
             self.gangle = 360 - self.gangle
-        # new_x = touch.x
-        # new_y = touch.y
         return new_x, new_y
 
+
     def show_values(self, x, y):
-       
         x = x - self.center_x
         y = y - self.center_y
         r = self.radius
-        # print(x, y, r)
-        my_sin = y / r  
-        my_cos = x / r
+        self.my_sin = y / r  
+        self.my_cos = x / r
         print("angle:",self.gangle)
-        print("sin:",my_sin)
-        print("cos:",my_cos)
+        self.gangle_label.text = "angle: {0}".format(self.gangle);
+        self.remove_widget(self.gangle_label)
+        self.add_widget(self.gangle_label)
+        self.gangle_label.pos = 10, 30
+        self.cos_label.color = 1,1,1,0.5
+        self.sin_label.text = "sin: {0}".format(self.my_sin);
+        self.sin_label.pos = 10, 10
+        self.sin_label.color = 0,1,0,0.5
+        self.remove_widget(self.sin_label)
+        self.add_widget(self.sin_label)
+        self.cos_label.text = "cos: {0}".format(self.my_cos);
+        self.cos_label.pos = 10, -10
+        self.cos_label.color = 1,1,0,0.5
+        
+        self.remove_widget(self.cos_label)
+        self.add_widget(self.cos_label)
+        print("sin:",self.my_sin)
+        print("cos:",self.my_cos)
 
-    def on_touch_down(self, touch):
+
+    def main_changes(self, touch):
         self.canvas.clear();
         self.draw_axis()
         self.draw_main_circle();
@@ -94,15 +113,28 @@ class MyCircle(Widget):
         self.show_values(new_x, new_y)
 
 
+    def on_touch_down(self, touch):
+        self.main_changes(touch)
+
+
+    def on_touch_move(self, touch):
+        self.main_changes(touch)
 
 
 
 
 
 
-class Test1App(App):
+
+
+
+
+
+
+
+class CircleApp(App):
     def build(self):
         return MyCircle()
 
 if __name__ == '__main__':
-    Test1App().run()
+    CircleApp().run()
