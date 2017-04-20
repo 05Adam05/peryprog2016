@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+            $("#b1").click(function(){
+                $("#p1").hide(2000);
+            });
+
+            $("#b2").click(function(){
+                $("#p1").show(1000);
+            });
+
+            $("#b3").click(function(){
+                $("#p1").toggle(1000);
+            });
+
+            $("#p1").mouseenter(function(){
+                $("#p1").text("Артур включай").css("color","red");
+                $("#b1").siblings().css({"background-color": "blue"})
+                $("")
+
+            });
+
+            $("#p1").mouseleave(function(){
+                $("#p1").text("Артур выключай").css("color","green");
+            });
+
+
+        });
+    </script>
+</head>
+<body>
+<p id="p1">Артур не включай</p>
+<button id="b1">Жми</button>
+<button id="b2">Жми</button>
+<button id="b3">Жми</button>
+</body>
+</html>
